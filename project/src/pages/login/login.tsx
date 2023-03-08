@@ -26,8 +26,8 @@ function Login() {
           <div className="container">
             <div className="header__wrapper">
               <div className="header__left">
-                <a className="header__logo-link" href="#no_scroll">
-                  <img className="header__logo" src="../project/public/img/logo.svg" alt="6 cities logo" width="81" height="41"/>
+                <a className="header__logo-link" href="/">
+                  <img className="header__logo" src={`${process.env.PUBLIC_URL}img/logo.svg`} alt="6 cities logo" width="81" height="41"/>
                 </a>
               </div>
             </div>
@@ -52,7 +52,7 @@ function Login() {
             </section>
             <section className="locations locations--login locations--current">
               <div className="locations__item">
-                <a className="locations__item-link" href="#no_scroll">
+                <a className="locations__item-link" href="/">
                   <span>Amsterdam</span>
                 </a>
               </div>

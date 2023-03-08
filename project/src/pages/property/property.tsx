@@ -1,3 +1,5 @@
+// TODO сделать пути через PUBLIC_URL
+
 function Property() {
   return (
     <div>
@@ -27,7 +29,7 @@ function Property() {
             <div className="header__wrapper">
               <div className="header__left">
                 <a className="header__logo-link" href="main.html">
-                  <img className="header__logo" src="../project/public/img/logo.svg" alt="6 cities logo" width="81" height="41"/>
+                  <img className="header__logo" src={`${process.env.PUBLIC_URL}img/logo.svg`} alt="6 cities logo" width="81" height="41"/>
                 </a>
               </div>
               <nav className="header__nav">
@@ -39,7 +41,7 @@ function Property() {
                     </div>
                   </li>
                   <li className="header__nav-item">
-                    <a className="header__nav-link" href="#no_scroll">
+                    <a className="header__nav-link" href="/">
                       <span className="header__signout">Sign out</span>
                     </a>
                   </li>
@@ -54,22 +56,22 @@ function Property() {
             <div className="property__gallery-container container">
               <div className="property__gallery">
                 <div className="property__image-wrapper">
-                  <img className="property__image" src="../project/public/img/room.jpg" alt="Studio"/>
+                  <img className="property__image" src={`${process.env.PUBLIC_URL}img/room.jpg`} alt="Studio"/>
                 </div>
                 <div className="property__image-wrapper">
-                  <img className="property__image" src="../project/public/img/apartment-01.jpg" alt="Studio"/>
+                  <img className="property__image" src={`${process.env.PUBLIC_URL}img/apartment-01.jpg`} alt="Studio"/>
                 </div>
                 <div className="property__image-wrapper">
-                  <img className="property__image" src="../project/public/img/apartment-02.jpg" alt="Studio"/>
+                  <img className="property__image" src={`${process.env.PUBLIC_URL}img/apartment-02.jpg`} alt="Studio"/>
                 </div>
                 <div className="property__image-wrapper">
-                  <img className="property__image" src="../project/public/img/apartment-03.jpg" alt="Studio"/>
+                  <img className="property__image" src={`${process.env.PUBLIC_URL}img/apartment-03.jpg`} alt="Studio"/>
                 </div>
                 <div className="property__image-wrapper">
-                  <img className="property__image" src="../project/public/img/studio-01.jpg" alt="Studio"/>
+                  <img className="property__image" src={`${process.env.PUBLIC_URL}img/studio-01.jpg`} alt="Studio"/>
                 </div>
                 <div className="property__image-wrapper">
-                  <img className="property__image" src="../project/public/img/apartment-01.jpg" alt="Studio"/>
+                  <img className="property__image" src={`${process.env.PUBLIC_URL}img/apartment-01.jpg`} alt="Studio"/>
                 </div>
               </div>
             </div>
@@ -144,7 +146,7 @@ function Property() {
                   <h2 className="property__host-title">Meet the host</h2>
                   <div className="property__host-user user">
                     <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
-                      <img className="property__avatar user__avatar" src="../project/public/img/avatar-angelina.jpg" width="74" height="74" alt="Host avatar"/>
+                      <img className="property__avatar user__avatar" src={`${process.env.PUBLIC_URL}img/avatar-angelina.jpg`} width="74" height="74" alt="Host avatar"/>
                     </div>
                     <span className="property__user-name">
                     Angelina
@@ -170,7 +172,7 @@ function Property() {
                     <li className="reviews__item">
                       <div className="reviews__user user">
                         <div className="reviews__avatar-wrapper user__avatar-wrapper">
-                          <img className="reviews__avatar user__avatar" src="../project/public/img/avatar-max.jpg" width="54" height="54" alt="Reviews avatar"/>
+                          <img className="reviews__avatar user__avatar" src={`${process.env.PUBLIC_URL}img/avatar-max.jpg`} width="54" height="54" alt="Reviews avatar"/>
                         </div>
                         <span className="reviews__user-name">
                         Max
@@ -262,8 +264,8 @@ function Property() {
               <div className="near-places__list places__list">
                 <article className="near-places__card place-card">
                   <div className="near-places__image-wrapper place-card__image-wrapper">
-                    <a href="#no_scroll">
-                      <img className="place-card__image" src="../project/public/img/room.jpg" width="260" height="200"
+                    <a href="/">
+                      <img className="place-card__image" src={`${process.env.PUBLIC_URL}img/room.jpg`} width="260" height="200"
                         alt="Place"
                       />
                     </a>
@@ -282,7 +284,7 @@ function Property() {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#no_scroll">Wood and stone place</a>
+                      <a href="/">Wood and stone place</a>
                     </h2>
                     <p className="place-card__type">Private room</p>
                   </div>
@@ -290,8 +292,8 @@ function Property() {
 
                 <article className="near-places__card place-card">
                   <div className="near-places__image-wrapper place-card__image-wrapper">
-                    <a href="#no_scroll">
-                      <img className="place-card__image" src="../project/public/img/apartment-02.jpg" width="260"
+                    <a href="/">
+                      <img className="place-card__image" src={`${process.env.PUBLIC_URL}img/apartment-02.jpg`} width="260"
                         height="200" alt="Place"
                       />
                     </a>
@@ -310,7 +312,7 @@ function Property() {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#no_scroll">Canal View Prinsengracht</a>
+                      <a href="/">Canal View Prinsengracht</a>
                     </h2>
                     <p className="place-card__type">Apartment</p>
                   </div>
@@ -321,8 +323,8 @@ function Property() {
                     <span>Premium</span>
                   </div>
                   <div className="near-places__image-wrapper place-card__image-wrapper">
-                    <a href="#no_scroll">
-                      <img className="place-card__image" src="../project/public/img/apartment-03.jpg" width="260"
+                    <a href="/">
+                      <img className="place-card__image" src={`${process.env.PUBLIC_URL}img/apartment-03.jpg`} width="260"
                         height="200" alt="Place"
                       />
                     </a>
@@ -341,7 +343,7 @@ function Property() {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#no_scroll">Nice, cozy, warm big bed apartment</a>
+                      <a href="/">Nice, cozy, warm big bed apartment</a>
                     </h2>
                     <p className="place-card__type">Apartment</p>
                   </div>

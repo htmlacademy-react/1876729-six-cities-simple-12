@@ -9,7 +9,7 @@ function CardOffer({linkForCard}: CardOfferType): JSX.Element {
         <span>Premium</span>
       </div>
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#no_scroll">
+        <a href="project/src/components#no_scroll">
           <img className="place-card__image" src={linkForCard} width="260" height="200" alt="Place"/>
         </a>
       </div>
@@ -28,7 +28,7 @@ function CardOffer({linkForCard}: CardOfferType): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#no_scroll">Beautiful &amp; luxurious apartment at great location</a>
+          <a href="project/src/components#no_scroll">Beautiful &amp; luxurious apartment at great location</a>
         </h2>
         <p className="place-card__type">Apartment</p>
       </div>
