@@ -1,11 +1,13 @@
-import CardOffer from '../../components/card-offer/card.offer';
 import {Link} from 'react-router-dom';
+import ListOffers from '../../components/list-offers/list.offers';
+import {offerArray} from '../../types/offers.type';
 
 type MainType = {
   count: number;
+  arrayCard: offerArray;
 }
 
-function Main({count}: MainType): JSX.Element {
+function Main({count, arrayCard}: MainType): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -93,13 +95,7 @@ function Main({count}: MainType): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                <CardOffer premium linkForCard="img/apartment-01.jpg" price={120} title='Beautiful &amp; luxurious apartment at great location' typeApartment='Apartment'/>
-                <CardOffer premium={false} linkForCard="img/room.jpg" price={80} title='Wood and stone place' typeApartment='Private room'/>
-                <CardOffer premium={false} linkForCard="img/apartment-02.jpg" price={132} title='Canal View Prinsengracht' typeApartment='Apartment'/>
-                <CardOffer premium linkForCard="img/apartment-03.jpg" price={180} title='Nice, cozy, warm big bed apartment' typeApartment='Apartment'/>
-                <CardOffer premium={false} linkForCard="img/room.jpg" price={80} title='Wood and stone place' typeApartment='Private room'/>
-              </div>
+              <ListOffers cardArr={arrayCard}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>

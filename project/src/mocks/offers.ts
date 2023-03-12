@@ -1,4 +1,4 @@
-import {offerArray} from "../types/offers.type";
+import {offerArray} from '../types/offers.type';
 
 export const offers: offerArray = [
   {
@@ -7,7 +7,7 @@ export const offers: offerArray = [
     price: 120,
     premium: true,
     typeApartment: 'Apartment',
-    photos: ['img/apartment-01.jpg'],
+    photos: 'img/apartment-01.jpg',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const offers: offerArray = [
     price: 80,
     premium: false,
     typeApartment: 'Private room',
-    photos: ['img/apartment-02.jpg'],
+    photos: 'img/apartment-02.jpg',
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const offers: offerArray = [
     price: 132,
     premium: false,
     typeApartment: 'Private room',
-    photos: ['img/room.jpg'],
+    photos: 'img/room.jpg',
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const offers: offerArray = [
     price: 180,
     premium: false,
     typeApartment: 'Apartment',
-    photos: ['img/apartment-03.jpg'],
+    photos: 'img/apartment-03.jpg',
   },
   {
     id: 5,
@@ -39,9 +39,6 @@ export const offers: offerArray = [
     price: 80,
     premium: false,
     typeApartment: 'Private room',
-    photos: ['img/room.jpg'],
+    photos: 'img/room.jpg',
   },
 ];
-
-
-

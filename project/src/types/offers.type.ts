@@ -4,7 +4,7 @@ type Offers = {
   price: number,
   premium: boolean,
   typeApartment: string,
-  photos: string[],
+  photos: string,
 }
 
 export type offerArray = Offers[];
