@@ -1,4 +1,4 @@
-import CardOffer from '../../components/cardOffer/card.offer';
+import CardOffer from '../../components/card-offer/card.offer';
 import {Link} from 'react-router-dom';
 
 type MainType = {
@@ -41,32 +41,32 @@ function Main({count}: MainType): JSX.Element {
           <section className="locations container">
             <ul className="locations__list tabs__list">
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Paris</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Cologne</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Brussels</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a href="#no_scroll" className="locations__item-link tabs__item tabs__item--active">
+                <a href="/" className="locations__item-link tabs__item tabs__item--active">
                   <span>Amsterdam</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Hamburg</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Dusseldorf</span>
                 </a>
               </li>
@@ -94,11 +94,11 @@ function Main({count}: MainType): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <CardOffer linkForCard="img/apartment-01.jpg"/>
-                <CardOffer linkForCard="img/room.jpg"/>
-                <CardOffer linkForCard="img/apartment-02.jpg"/>
-                <CardOffer linkForCard="img/apartment-03.jpg"/>
-                <CardOffer linkForCard="img/room.jpg"/>
+                <CardOffer premium linkForCard="img/apartment-01.jpg" price={120} title='Beautiful &amp; luxurious apartment at great location' typeApartment='Apartment'/>
+                <CardOffer premium={false} linkForCard="img/room.jpg" price={80} title='Wood and stone place' typeApartment='Private room'/>
+                <CardOffer premium={false} linkForCard="img/apartment-02.jpg" price={132} title='Canal View Prinsengracht' typeApartment='Apartment'/>
+                <CardOffer premium linkForCard="img/apartment-03.jpg" price={180} title='Nice, cozy, warm big bed apartment' typeApartment='Apartment'/>
+                <CardOffer premium={false} linkForCard="img/room.jpg" price={80} title='Wood and stone place' typeApartment='Private room'/>
               </div>
             </section>
             <div className="cities__right-section">
