@@ -1,6 +1,6 @@
 import PremiumMark from '../premium-mark/premium.mark';
 import {Link} from 'react-router-dom';
-import React from 'react';
+import React, {useState} from 'react';
 
 type CardOfferType = {
   linkForCard: string;
@@ -12,9 +12,10 @@ type CardOfferType = {
 }
 
 function CardOffer({linkForCard, price, title, typeApartment, premium, hrefLink}: CardOfferType): JSX.Element {
+  const [MouseEnterData, MouseEnterFunction] = useState('Навёл курсор!');
 
   return (
-    <article onMouseEnter={() => ('Навёл курсор!')} className="cities__card place-card">
+    <article onMouseEnter={() => MouseEnterFunction(MouseEnterData)} className="cities__card place-card">
       {premium ? <PremiumMark/> : undefined}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="project/src/components#no_scroll">
