@@ -15,10 +15,10 @@ function App({count, arrayCards}: AppType): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/'>
+        <Route path={AppRoute.Main}>
           <Route index element={<Main count={count} arrayCard={arrayCards}/>} />
           <Route path={AppRoute.Login} element={<Login />} />
-          <Route path={AppRoute.Room} element={<Property />} />
+          <Route path='/offer/:id' element={<Property />} />
         </Route>
         <Route path='*' element={<NotFoundPages />}/>
       </Routes>
