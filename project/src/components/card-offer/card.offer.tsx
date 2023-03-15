@@ -1,13 +1,22 @@
+import PremiumMark from '../premium-mark/premium.mark';
+import {Link} from 'react-router-dom';
+import React, {useState} from 'react';
+
 type CardOfferType = {
   linkForCard: string;
+  price: number;
+  title: string;
+  typeApartment: string;
+  premium: boolean;
+  hrefLink: string;
 }
 
-function CardOffer({linkForCard}: CardOfferType): JSX.Element {
+function CardOffer({linkForCard, price, title, typeApartment, premium, hrefLink}: CardOfferType): JSX.Element {
+  const [MouseEnterData, MouseEnterFunction] = useState('Навёл курсор!');
+
   return (
-    <article className="cities__card place-card">
-      <div className="place-card__mark">
-        <span>Premium</span>
-      </div>
+    <article onMouseEnter={() => MouseEnterFunction(MouseEnterData)} className="cities__card place-card">
+      {premium ? <PremiumMark/> : undefined}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="project/src/components#no_scroll">
           <img className="place-card__image" src={linkForCard} width="260" height="200" alt="Place"/>
@@ -16,7 +25,7 @@ function CardOffer({linkForCard}: CardOfferType): JSX.Element {
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
-            <b className="place-card__price-value">&euro;120</b>
+            <b className="place-card__price-value">&euro;{price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
 
@@ -28,9 +37,9 @@ function CardOffer({linkForCard}: CardOfferType): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="project/src/components#no_scroll">Beautiful &amp; luxurious apartment at great location</a>
+          <Link to={hrefLink}>{title}</Link>
         </h2>
-        <p className="place-card__type">Apartment</p>
+        <p className="place-card__type">{typeApartment}</p>
       </div>
     </article>
   );

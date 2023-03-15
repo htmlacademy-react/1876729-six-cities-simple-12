@@ -1,11 +1,13 @@
-import CardOffer from '../../components/cardOffer/card.offer';
 import {Link} from 'react-router-dom';
+import ListOffers from '../../components/list-offers/list.offers';
+import {offerArray} from '../../types/offers.type';
 
 type MainType = {
   count: number;
+  arrayCard: offerArray;
 }
 
-function Main({count}: MainType): JSX.Element {
+function Main({count, arrayCard}: MainType): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -41,32 +43,32 @@ function Main({count}: MainType): JSX.Element {
           <section className="locations container">
             <ul className="locations__list tabs__list">
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Paris</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Cologne</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Brussels</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a href="#no_scroll" className="locations__item-link tabs__item tabs__item--active">
+                <a href="/" className="locations__item-link tabs__item tabs__item--active">
                   <span>Amsterdam</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Hamburg</span>
                 </a>
               </li>
               <li className="locations__item">
-                <a className="locations__item-link tabs__item" href="#no_scroll">
+                <a className="locations__item-link tabs__item" href="/">
                   <span>Dusseldorf</span>
                 </a>
               </li>
@@ -93,13 +95,7 @@ function Main({count}: MainType): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                <CardOffer linkForCard="img/apartment-01.jpg"/>
-                <CardOffer linkForCard="img/room.jpg"/>
-                <CardOffer linkForCard="img/apartment-02.jpg"/>
-                <CardOffer linkForCard="img/apartment-03.jpg"/>
-                <CardOffer linkForCard="img/room.jpg"/>
-              </div>
+              <ListOffers cardArr={arrayCard}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
