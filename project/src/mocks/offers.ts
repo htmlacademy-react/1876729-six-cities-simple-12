@@ -8,6 +8,11 @@ export const offers: offerArray = [
     premium: true,
     typeApartment: 'Apartment',
     photos: 'img/apartment-01.jpg',
+    location: {
+      title: 'Beautiful &amp; luxurious apartment at great location',
+      latitude: 52.3909553943508,
+      longitude: 4.85309666406198,
+    },
   },
   {
     id: 2,
@@ -16,6 +21,11 @@ export const offers: offerArray = [
     premium: false,
     typeApartment: 'Private room',
     photos: 'img/apartment-02.jpg',
+    location: {
+      title: 'Wood and stone place',
+      latitude: 52.3609553943508,
+      longitude: 4.85309666406198,
+    },
   },
   {
     id: 3,
@@ -24,6 +34,11 @@ export const offers: offerArray = [
     premium: false,
     typeApartment: 'Private room',
     photos: 'img/room.jpg',
+    location: {
+      title: 'Wood and stone place',
+      latitude: 52.3909553943508,
+      longitude: 4.929309666406198,
+    }
   },
   {
     id: 4,
@@ -32,6 +47,11 @@ export const offers: offerArray = [
     premium: false,
     typeApartment: 'Apartment',
     photos: 'img/apartment-03.jpg',
+    location: {
+      title: 'Nice, cozy, warm big bed apartment',
+      latitude: 52.3809553943508,
+      longitude: 4.939309666406198,
+    }
   },
   {
     id: 5,
@@ -40,5 +60,10 @@ export const offers: offerArray = [
     premium: false,
     typeApartment: 'Private room',
     photos: 'img/room.jpg',
+    location: {
+      title: 'Wood and stone place',
+      latitude: 52.3809553943508,
+      longitude: 4.939309666406190,
+    }
   },
 ];

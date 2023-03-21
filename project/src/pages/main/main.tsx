@@ -1,13 +1,26 @@
 import {Link} from 'react-router-dom';
 import ListOffers from '../../components/list-offers/list.offers';
+import Map from '../../components/map/map';
 import {offerArray} from '../../types/offers.type';
+import React, {useState} from 'react';
+import {City, Point, Points} from '../../types/map.type';
+
 
 type MainType = {
   count: number;
   arrayCard: offerArray;
+  city: City;
+  points: Points;
 }
 
-function Main({count, arrayCard}: MainType): JSX.Element {
+function Main({count, arrayCard, city, points}: MainType): JSX.Element {
+  const [selectedPoint, setSelectedPoint] = useState<Point | undefined>(undefined);
+
+  const onListItemHover = (listItemName: string) => {
+    const currentPoint = points.find((point) => point.title === listItemName);
+    setSelectedPoint(currentPoint);
+  };
+
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -95,10 +108,12 @@ function Main({count, arrayCard}: MainType): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <ListOffers cardArr={arrayCard}/>
+              <ListOffers cardArr={arrayCard} onListItemHover={onListItemHover}/>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <section className="cities__map map">
+                <Map city={city} points={points} selectedPoint={selectedPoint}/>
+              </section>
             </div>
           </div>
         </div>

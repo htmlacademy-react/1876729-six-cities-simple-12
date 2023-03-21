@@ -1,6 +1,6 @@
 import PremiumMark from '../premium-mark/premium.mark';
 import {Link} from 'react-router-dom';
-import React, {useState} from 'react';
+import React, {MouseEvent} from 'react';
 
 type CardOfferType = {
   linkForCard: string;
@@ -9,14 +9,18 @@ type CardOfferType = {
   typeApartment: string;
   premium: boolean;
   hrefLink: string;
+  onListItemHover: (listItemName: string) => void;
 }
 
-function CardOffer({linkForCard, price, title, typeApartment, premium, hrefLink}: CardOfferType): JSX.Element {
-  const [MouseEnterData, MouseEnterFunction] = useState('Навёл курсор!');
+function CardOffer({linkForCard, price, title, typeApartment, premium, hrefLink, onListItemHover}: CardOfferType): JSX.Element {
+  const listItemHoverHandler = (event: MouseEvent<HTMLLIElement>) => {
+    event.preventDefault();
+    onListItemHover(event.currentTarget.innerText);
+  };
 
   return (
-    <article onMouseEnter={() => MouseEnterFunction(MouseEnterData)} className="cities__card place-card">
-      {premium ? <PremiumMark/> : undefined}
+    <article onMouseEnter={listItemHoverHandler} className="cities__card place-card">
+      {premium && <PremiumMark/>}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="project/src/components#no_scroll">
           <img className="place-card__image" src={linkForCard} width="260" height="200" alt="Place"/>
