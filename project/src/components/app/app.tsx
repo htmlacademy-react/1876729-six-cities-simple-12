@@ -5,18 +5,22 @@ import Property from '../../pages/property/property';
 import NotFoundPages from '../../pages/not-found-pages/not.found.pages';
 import {AppRoute} from '../../types/routes.enums';
 import {offerArray} from '../../types/offers.type';
+import {City} from '../../types/map.type';
+
 
 type AppType = {
   count: number;
   arrayCards: offerArray;
+  city: City;
+  points: offerArray;
 }
 
-function App({count, arrayCards}: AppType): JSX.Element {
+function App({count, arrayCards, city, points}: AppType): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
         <Route path={AppRoute.Main}>
-          <Route index element={<Main count={count} arrayCard={arrayCards}/>} />
+          <Route index element={<Main count={count} arrayCard={arrayCards} city={city} points={points}/>} />
           <Route path={AppRoute.Login} element={<Login />} />
           <Route path='/offer/:id' element={<Property />} />
         </Route>
