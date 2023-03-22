@@ -5,14 +5,14 @@ import Property from '../../pages/property/property';
 import NotFoundPages from '../../pages/not-found-pages/not.found.pages';
 import {AppRoute} from '../../types/routes.enums';
 import {offerArray} from '../../types/offers.type';
-import {City, Points} from '../../types/map.type';
+import {City} from '../../types/map.type';
 
 
 type AppType = {
   count: number;
   arrayCards: offerArray;
   city: City;
-  points: Points;
+  points: offerArray;
 }
 
 function App({count, arrayCards, city, points}: AppType): JSX.Element {

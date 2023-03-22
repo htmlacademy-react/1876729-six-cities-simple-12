@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
 import {AMSTERDAM} from './mocks/cities';
-import {POINTS} from './mocks/offers.points';
 import {offers} from './mocks/offers';
 
 
@@ -16,6 +15,6 @@ const Setting = {
 
 root.render(
   <React.StrictMode>
-    <App count={Setting.NumberOfOffers} arrayCards={offers} points={POINTS} city={AMSTERDAM}/>
+    <App count={Setting.NumberOfOffers} arrayCards={offers} points={offers} city={AMSTERDAM}/>
   </React.StrictMode>,
 );

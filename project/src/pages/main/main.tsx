@@ -1,20 +1,20 @@
 import {Link} from 'react-router-dom';
 import ListOffers from '../../components/list-offers/list.offers';
 import Map from '../../components/map/map';
-import {offerArray} from '../../types/offers.type';
+import {offerArray, Offers} from '../../types/offers.type';
 import React, {useState} from 'react';
-import {City, Point, Points} from '../../types/map.type';
+import {City} from '../../types/map.type';
 
 
 type MainType = {
   count: number;
   arrayCard: offerArray;
   city: City;
-  points: Points;
+  points: offerArray;
 }
 
 function Main({count, arrayCard, city, points}: MainType): JSX.Element {
-  const [selectedPoint, setSelectedPoint] = useState<Point | undefined>(undefined);
+  const [selectedPoint, setSelectedPoint] = useState<Offers | undefined>(undefined);
 
   const onListItemHover = (listItemName: string) => {
     const currentPoint = points.find((point) => point.title === listItemName);
