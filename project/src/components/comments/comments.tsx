@@ -4,7 +4,7 @@ type ReviewOfferTyper = {
   date: string;
 }
 
-function ReviewOffer({text, name, date}: ReviewOfferTyper) {
+function Comments({text, name, date}: ReviewOfferTyper) {
   return (
     <li className="reviews__item">
       <div className="reviews__user user">
@@ -27,4 +27,4 @@ function ReviewOffer({text, name, date}: ReviewOfferTyper) {
   );
 }
 
-export default ReviewOffer;
+export default Comments;

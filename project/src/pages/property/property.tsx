@@ -1,9 +1,19 @@
 import {Link} from 'react-router-dom';
-import ReviewsOfferForm from '../../components/reviews-offer-form/reviews.offer.form';
+import CommentAddForm from '../../components/comment-add-form/comment.add.form';
 import {useParams} from 'react-router-dom';
+import Map from '../../components/map/map';
+import React from 'react';
+import {City} from '../../types/map.type';
+import {offerArray} from '../../types/offers.type';
+import {CommentsType} from '../../types/comments.type';
 
-function Property() {
-  // const {id} = useParams();
+type PropertyType = {
+  city: City;
+  points: offerArray;
+  CommentsPack: CommentsType;
+}
+
+function Property({city, points, CommentsPack}: PropertyType) {
   // eslint-disable-next-line no-console
   console.log(useParams());
 
@@ -172,10 +182,12 @@ function Property() {
                     </p>
                   </div>
                 </div>
-                <ReviewsOfferForm />
+                <CommentAddForm CommentsPack={CommentsPack}/>
               </div>
             </div>
-            <section className="property__map map"></section>
+            <section className="property__map map" style={{width: '1144px', marginRight: 'auto', marginLeft: 'auto'}}>
+              <Map city={city} points={points} selectedPoint={undefined}/>
+            </section>
           </section>
           <div className="container">
             <section className="near-places places">
