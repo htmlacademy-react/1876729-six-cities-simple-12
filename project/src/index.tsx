@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
-import {AMSTERDAM} from './mocks/cities';
+import {AMSTERDAM} from '../../project/src/mocks/cities';
 import {offers} from './mocks/offers';
 import {comments} from './mocks/comments';
+import {Provider} from 'react-redux';
+import {store} from './store';
 
 
 const root = ReactDOM.createRoot(
@@ -16,6 +18,8 @@ const Setting = {
 
 root.render(
   <React.StrictMode>
-    <App count={Setting.NumberOfOffers} arrayCards={offers} points={offers} city={AMSTERDAM} CommentsPack={comments}/>
+    <Provider store={store}>
+      <App count={Setting.NumberOfOffers} arrayCards={offers} points={offers} city={AMSTERDAM} CommentsPack={comments}/>
+    </Provider>
   </React.StrictMode>,
 );
