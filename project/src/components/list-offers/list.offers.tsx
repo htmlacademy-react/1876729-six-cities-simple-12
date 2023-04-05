@@ -24,8 +24,7 @@ function ListOffers({cardArr, onListItemHover}: ListOffersProps): JSX.Element {
             hrefLink={generatePath(AppRoute.Room, {id: item.id.toString()})}
             onListItemHover={onListItemHover}
           />
-        );}
-      )}
+        );})}
     </div>
   );
 }

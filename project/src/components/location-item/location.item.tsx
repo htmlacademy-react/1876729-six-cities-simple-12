@@ -4,7 +4,7 @@ type LocationItemType = {
   city: string;
   changeCity: (city: string) => void;
 }
-// tabs__item--active
+
 export function LocationItem({city, changeCity}: LocationItemType) {
 
   return (

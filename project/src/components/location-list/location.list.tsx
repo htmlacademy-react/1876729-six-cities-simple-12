@@ -17,3 +17,7 @@ export function LocationList() {
     </ul>
   );
 }
+
+//  action тянет type и новый state
+//  reducer выполняет функцию исходя из type (например просто меняет свой state)
+// далее необходима функция которая обновляет состояние исходя из store.getState()

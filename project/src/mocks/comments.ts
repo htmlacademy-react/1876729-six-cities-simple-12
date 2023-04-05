@@ -10,7 +10,7 @@ export const comments: CommentsType = [
   {
     id: 13,
     name: 'Ivan',
-    text: 'Очень круто, но ничего не понятно',
+    text: 'Рекомендую! =)',
     date: 'March 2023'
   }
 ];
