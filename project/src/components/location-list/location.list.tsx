@@ -8,7 +8,9 @@ export function LocationList() {
   const dispatch = useDispatch();
 
   const onChangeCity = (city: string) => {
-    dispatch(changeCity(city));
+    // eslint-disable-next-line no-console
+    console.log(dispatch(changeCity(city)));
+    changeCity(city);
   };
 
   return (
@@ -17,7 +19,3 @@ export function LocationList() {
     </ul>
   );
 }
-
-//  action тянет type и новый state
-//  reducer выполняет функцию исходя из type (например просто меняет свой state)
-// далее необходима функция которая обновляет состояние исходя из store.getState()
