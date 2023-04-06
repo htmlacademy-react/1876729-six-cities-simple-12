@@ -1,17 +1,24 @@
 import CardOffer from '../card-offer/card.offer';
-import {offerArray} from '../../types/offers.type';
 import {AppRoute} from '../../types/routes.enums';
 import {generatePath} from 'react-router-dom';
+import {useAppSelector} from '../../hooks';
+import {cities} from '../../mocks/cities';
 
 type ListOffersProps = {
-  cardArr: offerArray;
   onListItemHover: (listItemName: string) => void;
 }
 
-function ListOffers({cardArr, onListItemHover}: ListOffersProps): JSX.Element {
+type RootState = {
+  city: string;
+}
+
+function ListOffers({onListItemHover}: ListOffersProps): JSX.Element {
+  const city = useAppSelector((state: unknown) => (state as RootState).city);
+  const cardArr = cities.find((item) => item.title === city);
+
   return (
     <div className="cities__places-list places__list tabs__content">
-      {cardArr.map((item, index) => {
+      {cardArr?.offers.map((item, index) => {
         const keyValue = `${index}-${item.title}`;
         return(
           <CardOffer
@@ -24,8 +31,7 @@ function ListOffers({cardArr, onListItemHover}: ListOffersProps): JSX.Element {
             hrefLink={generatePath(AppRoute.Room, {id: item.id.toString()})}
             onListItemHover={onListItemHover}
           />
-        );}
-      )}
+        );})}
     </div>
   );
 }

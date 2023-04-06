@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom';
 import CommentAddForm from '../../components/comment-add-form/comment.add.form';
-import {useParams} from 'react-router-dom';
 import Map from '../../components/map/map';
 import React from 'react';
 import {City} from '../../types/map.type';
@@ -14,9 +13,6 @@ type PropertyType = {
 }
 
 function Property({city, points, CommentsPack}: PropertyType) {
-  // eslint-disable-next-line no-console
-  console.log(useParams());
-
   return (
     <div>
       <div className="page">

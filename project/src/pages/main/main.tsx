@@ -9,12 +9,11 @@ import {LocationList} from '../../components/location-list/location.list';
 
 type MainType = {
   count: number;
-  arrayCard: offerArray;
   city: City;
   points: offerArray;
 }
 
-function Main({count, arrayCard, city, points}: MainType): JSX.Element {
+function Main({count, city, points}: MainType): JSX.Element {
   const [selectedPoint, setSelectedPoint] = useState<Offers | undefined>(undefined);
 
   const onListItemHover = (listItemName: string) => {
@@ -78,7 +77,7 @@ function Main({count, arrayCard, city, points}: MainType): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <ListOffers cardArr={arrayCard} onListItemHover={onListItemHover}/>
+              <ListOffers onListItemHover={onListItemHover}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map">

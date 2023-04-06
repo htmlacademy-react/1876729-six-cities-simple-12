@@ -8,7 +8,9 @@ export function LocationList() {
   const dispatch = useDispatch();
 
   const onChangeCity = (city: string) => {
-    dispatch(changeCity(city));
+    // eslint-disable-next-line no-console
+    console.log(dispatch(changeCity(city)));
+    changeCity(city);
   };
 
   return (

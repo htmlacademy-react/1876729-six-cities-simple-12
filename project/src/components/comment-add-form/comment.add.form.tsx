@@ -22,8 +22,6 @@ function CommentAddForm({CommentsPack}: ReviewsOfferFormType) {
   const fieldChangeHandle = (evt: ReviewFormChangeEvent) => {
     const {name, value} = evt.target;
     setFormData({...reviewObj, [name]: value});
-    // eslint-disable-next-line no-console
-    console.log(reviewObj);
   };
 
   const addComment = (evt: ReviewFormBtnEvent) => {
