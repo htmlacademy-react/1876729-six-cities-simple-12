@@ -12,4 +12,3 @@ export const reducer = createReducer(initialState, (builder) => {
       state.city = action.payload;
     });
 });
-
