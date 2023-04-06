@@ -9,5 +9,5 @@ export type City = {
   offers: offerArray;
 };
 
-export type Cityes = City[]
+export type Cities = City[]
 
