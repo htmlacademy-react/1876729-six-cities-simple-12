@@ -2,14 +2,14 @@ import {useRef, useEffect} from 'react';
 import 'leaflet/dist/leaflet.css';
 import {Icon, Marker} from 'leaflet';
 import useMap from '../../hooks/useMap';
-import {City} from '../../types/map.type';
 import {URL_MARKER_CURRENT, URL_MARKER_DEFAULT} from '../../mocks/const';
-import {offerArray, Offers} from '../../types/offers.type';
+import {Offers} from '../../types/offers.type';
+import {useAppSelector} from '../../hooks';
+import {cities} from '../../mocks/cities';
+import {City} from '../../types/map.type';
 
 
 type MapProps = {
-  city: City;
-  points: offerArray;
   selectedPoint: Offers | undefined;
 };
 
@@ -25,15 +25,16 @@ const currentCustomIcon = new Icon({
   iconAnchor: [20, 40]
 });
 
-function Map(props: MapProps): JSX.Element {
-  const {city, points, selectedPoint} = props;
+function Map({selectedPoint}: MapProps): JSX.Element {
+  const cityState = useAppSelector((state: unknown) => (state as {city: string}).city);
+  const cityObj = cities.find((item) => item.title === cityState);
 
   const mapRef = useRef(null);
-  const map = useMap(mapRef, city);
+  const map = useMap(mapRef, cityObj as City);
 
   useEffect(() => {
     if (map) {
-      points.forEach((point) => {
+      cityObj?.offers.forEach((point) => {
         const marker = new Marker({
           lat: point.location.latitude,
           lng: point.location.longitude
@@ -48,7 +49,7 @@ function Map(props: MapProps): JSX.Element {
           .addTo(map);
       });
     }
-  }, [map, points, selectedPoint]);
+  }, [map, cityObj?.offers, selectedPoint]);
 
   return (
     <div style={{height: '100%'}} ref={mapRef}></div>

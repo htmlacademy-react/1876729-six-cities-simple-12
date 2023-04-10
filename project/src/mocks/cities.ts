@@ -10,41 +10,6 @@ export const AMSTERDAM: City = {
   offers: offers,
 };
 
-// export const PARIS: City = {
-//   title: 'Amsterdam',
-//   lat: 52.3740300,
-//   lng: 4.8896900,
-//   zoom: 10,
-// };
-//
-// export const COLOGNE: City = {
-//   title: 'Amsterdam',
-//   lat: 52.3740300,
-//   lng: 4.8896900,
-//   zoom: 10,
-// };
-//
-// export const BRUSSELS: City = {
-//   title: 'Amsterdam',
-//   lat: 52.3740300,
-//   lng: 4.8896900,
-//   zoom: 10,
-// };
-//
-// export const HAMBURG: City = {
-//   title: 'Amsterdam',
-//   lat: 52.3740300,
-//   lng: 4.8896900,
-//   zoom: 10,
-// };
-//
-// export const DUSSELDORF: City = {
-//   title: 'Amsterdam',
-//   lat: 52.3740300,
-//   lng: 4.8896900,
-//   zoom: 10,
-// };
-
 export const cities: Cityes = [
   {
     key: 1,
@@ -57,8 +22,8 @@ export const cities: Cityes = [
   {
     key: 2,
     title: 'Paris',
-    lat: 52.3740300,
-    lng: 4.8896900,
+    lat: 48.8534100,
+    lng: 2.3488000,
     zoom: 10,
     offers: offersTwo,
   },

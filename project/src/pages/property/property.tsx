@@ -2,12 +2,12 @@ import {Link} from 'react-router-dom';
 import CommentAddForm from '../../components/comment-add-form/comment.add.form';
 import Map from '../../components/map/map';
 import React from 'react';
-import {City} from '../../types/map.type';
+import {Cityes} from '../../types/map.type';
 import {offerArray} from '../../types/offers.type';
 import {CommentsType} from '../../types/comments.type';
 
 type PropertyType = {
-  city: City;
+  city: Cityes;
   points: offerArray;
   CommentsPack: CommentsType;
 }
@@ -182,7 +182,7 @@ function Property({city, points, CommentsPack}: PropertyType) {
               </div>
             </div>
             <section className="property__map map" style={{width: '1144px', marginRight: 'auto', marginLeft: 'auto'}}>
-              <Map city={city} points={points} selectedPoint={undefined}/>
+              <Map selectedPoint={undefined}/>
             </section>
           </section>
           <div className="container">

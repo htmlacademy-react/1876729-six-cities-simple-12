@@ -5,13 +5,13 @@ import Property from '../../pages/property/property';
 import NotFoundPages from '../../pages/not-found-pages/not.found.pages';
 import {AppRoute} from '../../types/routes.enums';
 import {offerArray} from '../../types/offers.type';
-import {City} from '../../types/map.type';
+import {Cityes} from '../../types/map.type';
 import {CommentsType} from '../../types/comments.type';
 
 
 type AppType = {
   count: number;
-  city: City;
+  city: Cityes;
   points: offerArray;
   CommentsPack: CommentsType;
 }

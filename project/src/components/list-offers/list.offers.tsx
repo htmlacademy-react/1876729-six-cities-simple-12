@@ -3,18 +3,24 @@ import {AppRoute} from '../../types/routes.enums';
 import {generatePath} from 'react-router-dom';
 import {useAppSelector} from '../../hooks';
 import {cities} from '../../mocks/cities';
-
+import {sortingFunc} from './list.offers.sorting';
 type ListOffersProps = {
   onListItemHover: (listItemName: string) => void;
 }
 
 type RootState = {
   city: string;
+  variable: string;
 }
 
 function ListOffers({onListItemHover}: ListOffersProps): JSX.Element {
   const city = useAppSelector((state: unknown) => (state as RootState).city);
+  const variable = useAppSelector((state: unknown) => (state as RootState).variable);
   const cardArr = cities.find((item) => item.title === city);
+
+  if(cardArr !== undefined) {
+    cardArr.offers.sort(sortingFunc(variable));
+  }
 
   return (
     <div className="cities__places-list places__list tabs__content">

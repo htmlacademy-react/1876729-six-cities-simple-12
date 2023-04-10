@@ -5,7 +5,7 @@ import {offers} from './mocks/offers';
 import {comments} from './mocks/comments';
 import {Provider} from 'react-redux';
 import {store} from './store';
-import {AMSTERDAM} from './mocks/cities';
+import {cities} from './mocks/cities';
 
 
 const root = ReactDOM.createRoot(
@@ -19,7 +19,7 @@ const Setting = {
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App count={Setting.NumberOfOffers} points={offers} city={AMSTERDAM} CommentsPack={comments}/>
+      <App count={Setting.NumberOfOffers} points={offers} city={cities} CommentsPack={comments}/>
     </Provider>
   </React.StrictMode>,
 );
