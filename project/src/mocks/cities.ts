@@ -1,14 +1,5 @@
-import {City, Cityes} from '../types/map.type';
+import {Cityes} from '../types/map.type';
 import {offers, offersTwo} from './offers';
-
-export const AMSTERDAM: City = {
-  key: 1,
-  title: 'Amsterdam',
-  lat: 52.3740300,
-  lng: 4.8896900,
-  zoom: 10,
-  offers: offers,
-};
 
 export const cities: Cityes = [
   {

@@ -35,6 +35,8 @@ function Map({selectedPoint}: MapProps): JSX.Element {
   useEffect(() => {
     if (map) {
       cityObj?.offers.forEach((point) => {
+        // eslint-disable-next-line no-console
+        console.log(cityObj);
         const marker = new Marker({
           lat: point.location.latitude,
           lng: point.location.longitude

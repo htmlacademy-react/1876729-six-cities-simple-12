@@ -11,7 +11,7 @@ export const offers: offerArray = [
     location: {
       title: 'Beautiful &amp; luxurious apartment at great location',
       latitude: 52.3909553943508,
-      longitude: 4.85309666406198,
+      longitude: 14.85309666406198,
     },
   },
   {
@@ -78,8 +78,8 @@ export const offersTwo: offerArray = [
     photos: 'img/apartment-01.jpg',
     location: {
       title: 'Beautiful &amp; luxurious apartment at great location',
-      latitude: 14.3909553943508,
-      longitude: 3.85309666406198,
+      latitude: 52.3909553943508,
+      longitude: 4.85309666406198,
     },
   },
   {
@@ -91,8 +91,8 @@ export const offersTwo: offerArray = [
     photos: 'img/apartment-02.jpg',
     location: {
       title: 'Wood and stone place',
-      latitude: 52.3609553943508,
-      longitude: 41.85309666406198,
+      latitude: 532.3609553943508,
+      longitude: 1.85309666406198,
     },
   },
   {
